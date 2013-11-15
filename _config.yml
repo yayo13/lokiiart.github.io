@@ -1,1 +1,6 @@
 baseurl: /
+
+comments :
+    provider : duoshuo
+    duoshuo :
+        short_name : iartisan

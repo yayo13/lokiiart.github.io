@@ -1,0 +1,105 @@
+<!DOCTYPE html lang="zh-CN">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Loki iArt-工匠日记">
+<meta name="keywords" content="keywords">
+<meta name="robots" content="index,follow">
+<meta name="application-name" content="BootstrapiArt">
+
+<!-- Le styles -->
+<link media="all" rel="stylesheet" href="{{ site.url }}/diary/templates/bootstrap/css/bootstrap.css" type="text/css" />
+<!--[if lte IE 6]>
+<!-- bsie css 补丁文件 -->
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/diary/templates/bootstrap/css/bootstrap-ie6.css">
+
+<!-- bsie 额外的 css 补丁文件 -->
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/diary/templates/bootstrap/css/ie.css">
+<![endif]-->
+<style>
+body{
+font-family: "Helvetica Neue", Helvetica,  "Microsoft Yahei UI", "Microsoft YaHei", Arial,SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead
+{
+font-family: "Helvetica Neue", Helvetica,  "Microsoft Yahei UI", "Microsoft YaHei", Arial,SimHei, "\5B8B\4F53", simsun, sans-serif;
+font-weight: normal;
+}
+
+#scrollUp {
+bottom: 20px;
+right: 20px;
+height: 38px;  /* Height of image */
+width: 38px; /* Width of image */
+background: url("{{ site.url }}/diary/templates/bootstrap/img/top.png") no-repeat;
+}
+</style>
+<link href="{{ site.url }}/diary/templates/bootstrap/css/prettify.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.7.0/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- 各类图标
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="ico/favicon.png">
+-->
+
+<script>
+var _hmt = _hmt || [];
+</script>
+
+</head>
+
+<body data-spy="scroll"">
+		<div class="container">
+				<div class="row">
+						<div class="span12">
+								{{ content }}
+						</div>
+				</div>
+				<div class="row">
+						<div class="span12">
+								{% include comments.html %}
+						</div>
+				</div>
+		</div>
+
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="{{ site.url }}/diary/templates/bootstrap/js/jquery.unveil.min.js"></script>
+<script src="{{ site.url }}/diary/templates/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lte IE 6]>
+<!-- bsie js 补丁只在IE6中才执行 -->
+<script type="text/javascript" src="{{ site.url }}/diary/templates/bootstrap/js/bootstrap-ie.js"></script>
+<![endif]-->
+<script src="{{ site.url }}/diary/templates/bootstrap/js/prettify.js"></script>
+<script src="{{ site.url }}/diary/templates/bootstrap/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+						$("img.lazy").unveil();
+						$.scrollUp({
+scrollName: 'scrollUp', 
+topDistance: '300',
+topSpeed: 300,
+animation: 'fade',
+animationInSpeed: 200,
+animationOutSpeed: 200, 
+scrollText: '', 
+activeOverlay: false 
+								});
+
+						});
+</script>
+<script type="text/javascript" src="{{ site.url }}/diary/templates/bootstrap/js/holder.js"></script>
+</body>
+</html>
